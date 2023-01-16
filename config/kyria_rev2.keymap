@@ -95,7 +95,7 @@
             bindings = <
 &trans  &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &trans                                 &trans   &kp DEL   &kp INS   &kp END   &kp RIGHT &trans
 &trans  &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                 &kp HOME &kp LEFT  &kp PG_UP &kp PG_DN &trans    &trans
-&trans  &trans    &trans   &kp DOWN  &kp UP    &trans &trans &trans     &trans &trans &trans   &kp PAUSE &kp PSCRN &trans    &trans    &trans
+&trans  &trans    &trans   &kp DOWN  &kp UP    &trans &trans &trans     &trans &trans &trans   &kp PAUSE_BREAK &kp PSCRN &trans    &trans    &trans
                            &trans    &trans    &trans &trans &trans     &trans &trans &trans   &trans    &trans
             >;
         };
