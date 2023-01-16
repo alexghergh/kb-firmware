@@ -30,27 +30,23 @@
 //
 // Default layer: letters + modifiers + often-used symbols (`, [, /, =, \, -)
 //
-//  /-----------------------------------------------\                                    /-----------------------------------------------\
-//  |   `   |   '   |   ,   |   .   |   P   |   Y   |                                    |   F   |   G   |   C   |   R   |   L   |   /   |
-//  |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-//  |   [   |   A   |   O   |   E   |   U   |   I   |                                    |   D   |   H   |   T   |   N   |   S   |   -   |
-//  |-------+-------+-------+-------+-------+-------+---------------\    /---------------+-------+-------+-------+-------+-------+-------|
-//  | SHIFT |   ;   |   Q   |   J   |   K   |   X   |  ESC  |  END  |    | SUPER |   \   |   B   |   M   |   W   |   V   |   Z   |   =   |
-//  \-----------------------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-----------------------/
-//                          | RGB_TG| LAYER1|  ALT  | SPACE | CTRL  |    |  TAB  | ENTER | BKSPC | SHIFT | LAYER2|
-//                          \---------------------------------------/    \---------------------------------------/
+//  /-----------------------------------------------\                                          /-----------------------------------------------\
+//  |   `   |   '   |   ,   |   .   |   P   |   Y   |                                          |   F   |   G   |   C   |   R   |   L   |   /   |
+//  |-------+-------+-------+-------+-------+-------|                                          |-------+-------+-------+-------+-------+-------|
+//  |   [   |   A   |   O   |   E   |   U   |   I   |                                          |   D   |   H   |   T   |   N   |   S   |   -   |
+//  |-------+-------+-------+-------+-------+-------+---------------\          /---------------+-------+-------+-------+-------+-------+-------|
+//  | SHIFT |   ;   |   Q   |   J   |   K   |   X   |  ESC  |  END  |          | SUPER |   \   |   B   |   M   |   W   |   V   |   Z   |   =   |
+//  \-----------------------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-----------------------/
+//                          | RGB_TG| LAYER1|  ALT  | SPACE | CTRL  |          |  TAB  | ENTER | BKSPC | SHIFT | LAYER2|
+//                          \---------------------------------------/          \---------------------------------------/
 
 // TODO: Modifier function for left ctrl LC(a) for tmux, presses CTRL + A automatically
 
             bindings = <
-&kp GRAVE  &kp APOS &kp COMMA &kp DOT &kp P     &kp Y
-                                                                                          &kp F    &kp G      &kp C     &kp R &kp L &kp FSLH
-&kp LBKT   &kp A    &kp O     &kp E   &kp U     &kp I
-                                                                                          &kp D    &kp H      &kp T     &kp N &kp S &kp MINUS
-&kp LSHIFT &kp SEMI &kp Q     &kp J   &kp K     &kp X    &kp ESC   &kp END
-                                                                       &kp LWIN &kp BSLH  &kp B    &kp M      &kp W     &kp V &kp Z &kp EQUAL
-                      &rgb_ug RGB_TOG &mo LOWER &kp LALT &kp SPACE &kp LCTRL
-                                                                       &kp TAB  &kp ENTER &kp BSPC &kp LSHIFT &mo RAISE
+&kp GRAVE  &kp APOS &kp COMMA &kp DOT &kp P     &kp Y                                              &kp F    &kp G      &kp C     &kp R &kp L &kp FSLH
+&kp LBKT   &kp A    &kp O     &kp E   &kp U     &kp I                                              &kp D    &kp H      &kp T     &kp N &kp S &kp MINUS
+&kp LSHIFT &kp SEMI &kp Q     &kp J   &kp K     &kp X    &kp ESC   &kp END      &kp LWIN &kp BSLH  &kp B    &kp M      &kp W     &kp V &kp Z &kp EQUAL
+                      &rgb_ug RGB_TOG &mo LOWER &kp LALT &kp SPACE &kp LCTRL    &kp TAB  &kp ENTER &kp BSPC &kp LSHIFT &mo RAISE
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
@@ -60,21 +56,21 @@
 //
 // Lower layer: numbers + f-keys + symbols
 //
-//  /-----------------------------------------------\                                    /-----------------------------------------------\
-//  |  trs  |   1   |   2   |   3   |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |  trs  |
-//  |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-//  |  trs  |   `   |  trs  |  trs  |  trs  |   -   |                                    |   =   |   /   |   \   |   [   |   ]   |  trs  |
-//  |-------+-------+-------+-------+-------+-------+---------------\    /---------------+-------+-------+-------+-------+-------+-------|
-//  |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |  trs  |  trs  |    |  trs  |  trs  |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
-//  \-----------------------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  |  trs  |  trs  |  trs  |  trs  |    |  trs  |  trs  |  trs  |  trs  |  trs  |
-//                          \---------------------------------------/    \---------------------------------------/
+//  /-----------------------------------------------\                                   /-----------------------------------------------\
+//  |  trs  |   1   |   2   |   3   |   4   |   5   |                                   |   6   |   7   |   8   |   9   |   0   |  trs  |
+//  |-------+-------+-------+-------+-------+-------|                                   |-------+-------+-------+-------+-------+-------|
+//  |  trs  |   `   |  trs  |  trs  |  trs  |   -   |                                   |   =   |   /   |   \   |   [   |   ]   |  trs  |
+//  |-------+-------+-------+-------+-------+-------+---------------\   /---------------+-------+-------+-------+-------+-------+-------|
+//  |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |  trs  |  trs  |   |  trs  |  trs  |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
+//  \-----------------------+-------+-------+-------+-------+-------|   |-------+-------+-------+-------+-------+-----------------------/
+//                          |  trs  |  trs  |  trs  |  trs  |  trs  |   |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          \---------------------------------------/   \---------------------------------------/
 
             bindings = <
-    &trans  &kp N1    &kp N2 &kp N3 &kp N4 &kp N5                                     &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &trans
-    &trans  &kp GRAVE &trans &trans &trans &kp MINUS                                  &kp EQUAL &kp FSLH &kp BSLH &kp LBKT &kp RBKT &trans
-    &kp F1  &kp F2    &kp F3 &kp F4 &kp F5 &kp F6    &trans  &trans     &trans &trans &kp F7    &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
-                             &trans &trans &trans    &trans  &trans     &trans &trans &trans    &trans   &trans
+    &trans  &kp N1    &kp N2 &kp N3 &kp N4 &kp N5                                      &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &trans
+    &trans  &kp GRAVE &trans &trans &trans &kp MINUS                                   &kp EQUAL &kp FSLH &kp BSLH &kp LBKT &kp RBKT &trans
+    &kp F1  &kp F2    &kp F3 &kp F4 &kp F5 &kp F6    &trans  &trans      &trans &trans &kp F7    &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+                             &trans &trans &trans    &trans  &trans      &trans &trans &trans    &trans   &trans
             >;
         };
 
@@ -82,21 +78,21 @@
 //
 // Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break
 //
-//  /-----------------------------------------------\                                    /-----------------------------------------------\
-//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN |  trs  |                                    |  trs  |  DEL  |  INS  |  END  | RIGHT |  trs  |
-//  |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                    |  HOME |  LEFT | PG_UP | PG_DN |  trs  |  trs  |
-//  |-------+-------+-------+-------+-------+-------+---------------\    /---------------+-------+-------+-------+-------+-------+-------|
-//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |    |  trs  |  trs  |  trs  | PAUSE | PSCRN |  trs  |  trs  |  trs  |
-//  \-----------------------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  |  trs  |  trs  |  trs  |  trs  |    |  trs  |  trs  |  trs  |  trs  |  trs  |
-//                          \---------------------------------------/    \---------------------------------------/
+//  /-----------------------------------------------\                                   /-----------------------------------------------\
+//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN |  trs  |                                   |  trs  |  DEL  |  INS  |  END  | RIGHT |  trs  |
+//  |-------+-------+-------+-------+-------+-------|                                   |-------+-------+-------+-------+-------+-------|
+//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                   |  HOME |  LEFT | PG_UP | PG_DN |  trs  |  trs  |
+//  |-------+-------+-------+-------+-------+-------+---------------\   /---------------+-------+-------+-------+-------+-------+-------|
+//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |   |  trs  |  trs  |  trs  | PAUSE | PSCRN |  trs  |  trs  |  trs  |
+//  \-----------------------+-------+-------+-------+-------+-------|   |-------+-------+-------+-------+-------+-----------------------/
+//                          |  trs  |  trs  |  trs  |  trs  |  trs  |   |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          \---------------------------------------/   \---------------------------------------/
 
             bindings = <
-&trans  &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &trans                                 &trans   &kp DEL   &kp INS   &kp END   &kp RIGHT &trans
-&trans  &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                 &kp HOME &kp LEFT  &kp PG_UP &kp PG_DN &trans    &trans
-&trans  &trans    &trans   &kp DOWN  &kp UP    &trans &trans &trans     &trans &trans &trans   &kp PAUSE_BREAK &kp PSCRN &trans    &trans    &trans
-                           &trans    &trans    &trans &trans &trans     &trans &trans &trans   &trans    &trans
+&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &trans                                  &trans   &kp DEL         &kp INS   &kp END   &kp RIGHT &trans
+&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                  &kp HOME &kp LEFT        &kp PG_UP &kp PG_DN &trans    &trans
+&trans &trans    &trans   &kp DOWN  &kp UP    &trans &trans &trans      &trans &trans &trans   &kp PAUSE_BREAK &kp PSCRN &trans    &trans    &trans
+                          &trans    &trans    &trans &trans &trans      &trans &trans &trans   &trans          &trans
             >;
         };
 
@@ -113,25 +109,21 @@
 //  FF    = Fast-forward
 //  SCRSV = Screensaver / Lock
 //
-//  /-----------------------------------------------\                                    /-----------------------------------------------\
-//  |  trs  |  REW  | MNEXT | MPREV | PLYPS |  trs  |                                    |  trs  | SCRSV | LOCK  |  trs  |  trs  |  trs  |
-//  |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-//  |  trs  |  FF   | VOLUP | VOLDN | MUTE  |  trs  |                                    |  trs  |  trs  |  trs  |  trs  |  trs  |  trs  |
-//  |-------+-------+-------+-------+-------+-------+---------------\    /---------------+-------+-------+-------+-------+-------+-------|
-//  |  trs  |  trs  | BRIUP | BRIDN |  trs  |  trs  |  trs  | SCRL  |    |  trs  |  trs  |  trs  | POWER | RESET | SLEEP | LOGOFF|  trs  |
-//  \-----------------------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  |  trs  |  trs  |  trs  | CAPS  |    |  trs  |  trs  |  trs  |  trs  |  trs  |
-//                          \---------------------------------------/    \---------------------------------------/
+//  /-----------------------------------------------\                                         /-----------------------------------------------\
+//  |  trs  |  REW  | MNEXT | MPREV | PLYPS |  trs  |                                         |  trs  | SCRSV | LOCK  |  trs  |  trs  |  trs  |
+//  |-------+-------+-------+-------+-------+-------|                                         |-------+-------+-------+-------+-------+-------|
+//  |  trs  |  FF   | VOLUP | VOLDN | MUTE  |  trs  |                                         |  trs  |  trs  |  trs  |  trs  |  trs  |  trs  |
+//  |-------+-------+-------+-------+-------+-------+---------------\         /---------------+-------+-------+-------+-------+-------+-------|
+//  |  trs  |  trs  | BRIUP | BRIDN |  trs  |  trs  |  trs  | SCRL  |         |  trs  |  trs  |  trs  | POWER | RESET | SLEEP | LOGOFF|  trs  |
+//  \-----------------------+-------+-------+-------+-------+-------|         |-------+-------+-------+-------+-------+-----------------------/
+//                          |  trs  |  trs  |  trs  |  trs  | CAPS  |         |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          \---------------------------------------/         \---------------------------------------/
 
             bindings = <
-  &trans &kp C_RW &kp C_NEXT   &kp C_PREV    &kp C_PP   &trans
-                                                                                      &trans &kp C_AL_LOCK &kp K_LOCK  &trans  &trans &trans
-  &trans &kp C_FF &kp C_VOL_UP &kp C_VOL_DN  &kp C_MUTE &trans
-                                                                                      &trans &trans        &trans      &trans  &trans &trans
-  &trans &trans   &kp C_BRI_UP &kp C_BRI_DN  &trans     &trans &trans &kp SLCK
-                                                                        &trans &trans &trans &trans        &trans      &trans  &trans &trans
-                               &trans        &trans     &trans &trans &kp CAPS
-                                                                        &trans &trans &trans &trans        &trans
+&trans &kp C_RW &kp C_NEXT   &kp C_PREV   &kp C_PP   &trans                                  &trans &kp C_AL_LOCK &kp K_LOCK &trans &trans &trans
+&trans &kp C_FF &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &trans                                  &trans &trans        &trans     &trans &trans &trans
+&trans &trans   &kp C_BRI_UP &kp C_BRI_DN &trans     &trans &trans &kp SLCK    &trans &trans &trans &trans        &trans     &trans &trans &trans
+                             &trans       &trans     &trans &trans &kp CAPS    &trans &trans &trans &trans        &trans
             >;
         };
     };
