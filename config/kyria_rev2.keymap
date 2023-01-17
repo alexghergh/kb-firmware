@@ -37,16 +37,16 @@
 //  |-------+-------+-------+-------+-------+-------+---------------\          /---------------+-------+-------+-------+-------+-------+-------|
 //  | SHIFT |   ;   |   Q   |   J   |   K   |   X   |  ESC  |  END  |          | SUPER |   \   |   B   |   M   |   W   |   V   |   Z   |   =   |
 //  \-----------------------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-----------------------/
-//                          | RGB_TG| LAYER1|  ALT  | SPACE | CTRL  |          |  TAB  | ENTER | BKSPC | SHIFT | LAYER2|
+//                          | RGB_TG|  ALT  | LAYER1| SPACE | CTRL  |          |  TAB  | ENTER | BKSPC | SHIFT | LAYER2|
 //                          \---------------------------------------/          \---------------------------------------/
 
 // TODO: Modifier function for left ctrl LC(a) for tmux, presses CTRL + A automatically
 
             bindings = <
-&kp GRAVE  &kp APOS &kp COMMA &kp DOT &kp P     &kp Y                                              &kp F    &kp G      &kp C     &kp R &kp L &kp FSLH
-&kp LBKT   &kp A    &kp O     &kp E   &kp U     &kp I                                              &kp D    &kp H      &kp T     &kp N &kp S &kp MINUS
-&kp LSHIFT &kp SEMI &kp Q     &kp J   &kp K     &kp X    &kp ESC   &kp END      &kp LWIN &kp BSLH  &kp B    &kp M      &kp W     &kp V &kp Z &kp EQUAL
-                      &rgb_ug RGB_TOG &mo LOWER &kp LALT &kp SPACE &kp LCTRL    &kp TAB  &kp ENTER &kp BSPC &kp LSHIFT &mo RAISE
+&kp GRAVE  &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                              &kp F    &kp G      &kp C     &kp R &kp L &kp FSLH
+&kp LBKT   &kp A    &kp O     &kp E   &kp U    &kp I                                              &kp D    &kp H      &kp T     &kp N &kp S &kp MINUS
+&kp LSHIFT &kp SEMI &kp Q     &kp J   &kp K    &kp X     &kp ESC   &kp END      &kp LWIN &kp BSLH  &kp B    &kp M      &kp W     &kp V &kp Z &kp EQUAL
+                      &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp TAB  &kp ENTER &kp BSPC &kp LSHIFT &mo RAISE
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
