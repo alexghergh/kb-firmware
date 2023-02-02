@@ -92,14 +92,14 @@
 //  |-------+-------+-------+-------+-------+-------+---------------\             /---------------+-------+-------+-------+-------+-------+-------|
 //  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |             |  trs  |  trs  |  trs  |  trs  |  DEL  |  trs  |  trs  |  trs  |
 //  \-----------------------+-------+-------+-------+-------+-------|             |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  |  trs  | BTCLR | BTPRV | BTNXT |             |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          |  trs  | BTCLR |  trs  | BTPRV | BTNXT |             |  trs  |  trs  |  trs  |  trs  |  trs  |
 //                          \---------------------------------------/             \---------------------------------------/
 
             bindings = <
-&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &kp PAUSE_BREAK                                   &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
-&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                            &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
-&trans &trans    &trans   &kp DOWN  &kp UP    &trans     &trans     &trans        &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
-                          &trans    &trans    &bt BT_CLR &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &trans
+&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN  &kp PAUSE_BREAK                                  &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
+&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT  &trans                                           &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
+&trans &trans    &trans   &kp DOWN  &kp UP     &trans    &trans     &trans        &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
+                          &trans    &bt BT_CLR &trans    &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &trans
             >;
         };
 
