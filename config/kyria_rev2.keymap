@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -78,21 +79,25 @@
 //
 // Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break
 //
-//  /-----------------------------------------------\                                   /-----------------------------------------------\
-//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                   |  trs  |  trs  |  trs  |  trs  | RIGHT |  trs  |
-//  |-------+-------+-------+-------+-------+-------|                                   |-------+-------+-------+-------+-------+-------|
-//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                   |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
-//  |-------+-------+-------+-------+-------+-------+---------------\   /---------------+-------+-------+-------+-------+-------+-------|
-//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |   |  trs  |  trs  |  trs  |  trs  |  DEL  |  trs  |  trs  |  trs  |
-//  \-----------------------+-------+-------+-------+-------+-------|   |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  |  trs  |  trs  |  trs  |  trs  |   |  trs  |  trs  |  trs  |  trs  |  trs  |
-//                          \---------------------------------------/   \---------------------------------------/
+//  BTCLR = Blueetooth clear current profile
+//  BTPRV = Blueetooth previous profile
+//  BTNXT = Blueetooth next profile
+//
+//  /-----------------------------------------------\                                             /-----------------------------------------------\
+//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                             |  trs  |  trs  |  trs  |  trs  | RIGHT |  trs  |
+//  |-------+-------+-------+-------+-------+-------|                                             |-------+-------+-------+-------+-------+-------|
+//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                             |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
+//  |-------+-------+-------+-------+-------+-------+---------------\             /---------------+-------+-------+-------+-------+-------+-------|
+//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |             |  trs  |  trs  |  trs  |  trs  |  DEL  |  trs  |  trs  |  trs  |
+//  \-----------------------+-------+-------+-------+-------+-------|             |-------+-------+-------+-------+-------+-----------------------/
+//                          |  trs  |  trs  | BTCLR | BTPRV | BTNXT |             |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          \---------------------------------------/             \---------------------------------------/
 
             bindings = <
-&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &kp PAUSE_BREAK                         &trans &trans   &trans   &trans  &kp RIGHT &trans
-&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                  &trans &kp LEFT &kp HOME &kp END &kp INS   &trans
-&trans &trans    &trans   &kp DOWN  &kp UP    &trans &trans &trans      &trans &trans &trans &trans   &kp DEL  &trans  &trans    &trans
-                          &trans    &trans    &trans &trans &trans      &trans &trans &trans &trans   &trans
+&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &kp PAUSE_BREAK                                   &trans &trans   &trans   &trans  &kp RIGHT &trans
+&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                            &trans &kp LEFT &kp HOME &kp END &kp INS   &trans
+&trans &trans    &trans   &kp DOWN  &kp UP    &trans     &trans     &trans        &trans &trans &trans &trans   &kp DEL  &trans  &trans    &trans
+                          &trans    &trans    &bt BT_CLR &bt BT_PRV &bt BT_NXT    &trans &trans &trans &trans   &trans
             >;
         };
 
