@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -77,14 +78,15 @@
 
         raise_layer {
 //
-// Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break
+// Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles
 //
-//  BTCLR = Blueetooth clear current profile
-//  BTPRV = Blueetooth previous profile
-//  BTNXT = Blueetooth next profile
+//  BTCLR  = Blueetooth clear current profile
+//  BTPRV  = Blueetooth previous profile
+//  BTNXT  = Blueetooth next profile
+//  OUTTOG = Toggle output selection (Bluetooth / USB)
 //
 //  /-----------------------------------------------\                                             /-----------------------------------------------\
-//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                             |  trs  |  trs  |  trs  |  trs  | RIGHT |  trs  |
+//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                             | OUTTOG|  trs  |  trs  |  trs  | RIGHT |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                             |-------+-------+-------+-------+-------+-------|
 //  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                             |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\             /---------------+-------+-------+-------+-------+-------+-------|
@@ -94,10 +96,10 @@
 //                          \---------------------------------------/             \---------------------------------------/
 
             bindings = <
-&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &kp PAUSE_BREAK                                   &trans &trans   &trans   &trans  &kp RIGHT &trans
-&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                            &trans &kp LEFT &kp HOME &kp END &kp INS   &trans
-&trans &trans    &trans   &kp DOWN  &kp UP    &trans     &trans     &trans        &trans &trans &trans &trans   &kp DEL  &trans  &trans    &trans
-                          &trans    &trans    &bt BT_CLR &bt BT_PRV &bt BT_NXT    &trans &trans &trans &trans   &trans
+&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN &kp PAUSE_BREAK                                   &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
+&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT &trans                                            &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
+&trans &trans    &trans   &kp DOWN  &kp UP    &trans     &trans     &trans        &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
+                          &trans    &trans    &bt BT_CLR &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &trans
             >;
         };
 
