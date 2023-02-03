@@ -78,28 +78,29 @@
 
         raise_layer {
 //
-// Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles
+// Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles + rgb effect cycle
 //
 //  BTCLR  = Blueetooth clear current profile
 //  BTPRV  = Blueetooth previous profile
 //  BTNXT  = Blueetooth next profile
 //  OUTTOG = Toggle output selection (Bluetooth / USB)
+//  RGBEFF = RGB effect cycle
 //
-//  /-----------------------------------------------\                                             /-----------------------------------------------\
-//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                             | OUTTOG|  trs  |  trs  |  trs  | RIGHT |  trs  |
-//  |-------+-------+-------+-------+-------+-------|                                             |-------+-------+-------+-------+-------+-------|
-//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                             |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
-//  |-------+-------+-------+-------+-------+-------+---------------\             /---------------+-------+-------+-------+-------+-------+-------|
-//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |             |  trs  |  trs  |  trs  |  trs  |  DEL  |  trs  |  trs  |  trs  |
-//  \-----------------------+-------+-------+-------+-------+-------|             |-------+-------+-------+-------+-------+-----------------------/
-//                          |  trs  | BTCLR |  trs  | BTPRV | BTNXT |             |  trs  |  trs  |  trs  |  trs  |  trs  |
-//                          \---------------------------------------/             \---------------------------------------/
+//  /-----------------------------------------------\                                                   /-----------------------------------------------\
+//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                                   | OUTTOG|  trs  |  trs  |  trs  | RIGHT |  trs  |
+//  |-------+-------+-------+-------+-------+-------|                                                   |-------+-------+-------+-------+-------+-------|
+//  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                                   |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
+//  |-------+-------+-------+-------+-------+-------+---------------\                   /---------------+-------+-------+-------+-------+-------+-------|
+//  |  trs  |  trs  |  trs  |  DOWN |   UP  |  trs  |  trs  |  trs  |                   |  trs  |  trs  |  trs  |  trs  |  DEL  |  trs  |  trs  |  trs  |
+//  \-----------------------+-------+-------+-------+-------+-------|                   |-------+-------+-------+-------+-------+-----------------------/
+//                          | RGBEFF| BTCLR |  trs  | BTPRV | BTNXT |                   |  trs  |  trs  |  trs  |  trs  |  trs  |
+//                          \---------------------------------------/                   \---------------------------------------/
 
             bindings = <
-&trans &kp PSCRN &kp UP   &kp PG_UP &kp PG_DN  &kp PAUSE_BREAK                                  &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
-&trans &kp LEFT  &kp DOWN &kp RIGHT &kp RIGHT  &trans                                           &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
-&trans &trans    &trans   &kp DOWN  &kp UP     &trans    &trans     &trans        &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
-                          &trans    &bt BT_CLR &trans    &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &trans
+&trans &kp PSCRN &kp UP   &kp PG_UP       &kp PG_DN  &kp PAUSE_BREAK                                  &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
+&trans &kp LEFT  &kp DOWN &kp RIGHT       &kp RIGHT  &trans                                           &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
+&trans &trans    &trans   &kp DOWN        &kp UP     &trans    &trans     &trans        &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
+                          &rgb_ug RGB_EFF &bt BT_CLR &trans    &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &trans
             >;
         };
 
