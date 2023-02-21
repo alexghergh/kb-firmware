@@ -31,7 +31,7 @@
 
         default_layer {
 //
-// Default layer: letters + modifiers + often-used symbols (`, [, /, =, \, -)
+// Default layer (layer 0): letters + modifiers
 //
 //  /-----------------------------------------------\                                          /-----------------------------------------------\
 //  |  ESC  |   '   |   ,   |   .   |   P   |   Y   |                                          |   F   |   G   |   C   |   R   |   L   |  ESC  |
@@ -42,8 +42,6 @@
 //  \-----------------------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-----------------------/
 //                          | RGB_TG|  ALT  | LAYER1| SPACE | CTRL  |          | SHIFT | ENTER | BKSPC |  TAB  | LAYER2|
 //                          \---------------------------------------/          \---------------------------------------/
-
-// TODO: Modifier function for left ctrl LC(a) for tmux, presses CTRL + A automatically
 
             bindings = <
 &kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F    &kp G   &kp C     &kp R &kp L &kp ESC
@@ -57,7 +55,7 @@
 
         lower_layer {
 //
-// Lower layer: numbers + f-keys + symbols + external power toggle
+// Lower layer (layer 1): numbers + f-keys + symbols + external power toggle
 //
 //  EPTOG  = Toggle external power
 //
@@ -81,7 +79,7 @@
 
         raise_layer {
 //
-// Raise layer: arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles + rgb effect cycle
+// Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles + rgb effect cycle
 //
 //  BTCLR  = Blueetooth clear current profile
 //  BTPRV  = Blueetooth previous profile
@@ -109,7 +107,7 @@
 
         adjust_layer {
 //
-// Adjust layer: ¯\_(ツ)_/¯
+// Adjust layer (layer 3): ¯\_(ツ)_/¯
 //
 //  MNEXT = Media next
 //  MPREV = Media previous
