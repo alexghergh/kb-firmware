@@ -40,14 +40,14 @@
 //  |-------+-------+-------+-------+-------+-------+---------------\          /---------------+-------+-------+-------+-------+-------+-------|
 //  | SUPER |   ;   |   Q   |   J   |   K   |   X   |  ESC  |  END  |          | SUPER |   \   |   B   |   M   |   W   |   V   |   Z   | SUPER |
 //  \-----------------------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-----------------------/
-//                          | RGB_TG|  ALT  | LAYER1| SPACE | CTRL  |          | SHIFT | ENTER | BKSPC |  TAB  | LAYER2|
+//                          | RGB_TG|  ALT  | LAYER1| SPACE | CTRL  |          | SHIFT | ENTER | none  | none  | LAYER2|
 //                          \---------------------------------------/          \---------------------------------------/
 
             bindings = <
-&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F    &kp G   &kp C     &kp R &kp L &kp TAB
-&kp LSHIFT &kp A    &kp O     &kp E   &kp U    &kp I                                                 &kp D    &kp H   &kp T     &kp N &kp S &kp LCTRL
-&kp LWIN   &kp SEMI &kp Q     &kp J   &kp K    &kp X     &kp ESC   &kp END      &kp LWIN   &kp BSLH  &kp B    &kp M   &kp W     &kp V &kp Z &kp LWIN
-                      &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &kp BSPC &kp TAB &mo RAISE
+&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F &kp G &kp C     &kp R &kp L &kp TAB
+&kp LSHIFT &kp A    &kp O     &kp E   &kp U    &kp I                                                 &kp D &kp H &kp T     &kp N &kp S &kp LCTRL
+&kp LWIN   &kp SEMI &kp Q     &kp J   &kp K    &kp X     &kp ESC   &kp END      &kp LWIN   &kp BSLH  &kp B &kp M &kp W     &kp V &kp Z &kp LWIN
+                      &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &none &none &mo RAISE
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
