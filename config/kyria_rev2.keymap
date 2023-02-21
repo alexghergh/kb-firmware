@@ -34,7 +34,7 @@
 // Default layer (layer 0): letters + modifiers
 //
 //  /-----------------------------------------------\                                          /-----------------------------------------------\
-//  |  ESC  |   '   |   ,   |   .   |   P   |   Y   |                                          |   F   |   G   |   C   |   R   |   L   |  ESC  |
+//  |  ESC  |   '   |   ,   |   .   |   P   |   Y   |                                          |   F   |   G   |   C   |   R   |   L   |  TAB  |
 //  |-------+-------+-------+-------+-------+-------|                                          |-------+-------+-------+-------+-------+-------|
 //  | SHIFT |   A   |   O   |   E   |   U   |   I   |                                          |   D   |   H   |   T   |   N   |   S   | CTRL  |
 //  |-------+-------+-------+-------+-------+-------+---------------\          /---------------+-------+-------+-------+-------+-------+-------|
@@ -44,7 +44,7 @@
 //                          \---------------------------------------/          \---------------------------------------/
 
             bindings = <
-&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F    &kp G   &kp C     &kp R &kp L &kp ESC
+&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F    &kp G   &kp C     &kp R &kp L &kp TAB
 &kp LSHIFT &kp A    &kp O     &kp E   &kp U    &kp I                                                 &kp D    &kp H   &kp T     &kp N &kp S &kp LCTRL
 &kp LWIN   &kp SEMI &kp Q     &kp J   &kp K    &kp X     &kp ESC   &kp END      &kp LWIN   &kp BSLH  &kp B    &kp M   &kp W     &kp V &kp Z &kp LWIN
                       &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &kp BSPC &kp TAB &mo RAISE
