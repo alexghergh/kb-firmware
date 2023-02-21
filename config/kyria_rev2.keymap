@@ -50,7 +50,7 @@
                       &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &none &none &mo RAISE
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         lower_layer {
