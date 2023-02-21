@@ -55,12 +55,10 @@
 
         lower_layer {
 //
-// Lower layer (layer 1): numbers + tab + backspace + f-keys + symbols + external power toggle
-//
-//  EPTOG  = Toggle external power
+// Lower layer (layer 1): numbers + tab + backspace + f-keys + symbols
 //
 //  /-----------------------------------------------\                                      /-----------------------------------------------\
-//  |  trs  |   1   |   2   |   3   |   4   |   5   |                                      |   6   |   7   |   8   |   9   |   0   | EPTOG |
+//  |  trs  |   1   |   2   |   3   |   4   |   5   |                                      |   6   |   7   |   8   |   9   |   0   |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                      |-------+-------+-------+-------+-------+-------|
 //  |  trs  |   `   |  trs  |   -   |   =   |  TAB  |                                      | BKSPC |   /   |   \   |   [   |   ]   |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\      /---------------+-------+-------+-------+-------+-------+-------|
@@ -70,7 +68,7 @@
 //                          \---------------------------------------/      \---------------------------------------/
 
             bindings = <
-    &trans  &kp N1    &kp N2 &kp N3    &kp N4    &kp N5                                  &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &ext_power EP_TOG
+    &trans  &kp N1    &kp N2 &kp N3    &kp N4    &kp N5                                  &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &trans
     &trans  &kp GRAVE &trans &kp MINUS &kp EQUAL &kp TAB                                 &kp BSPC &kp FSLH &kp BSLH &kp LBKT &kp RBKT &trans
     &kp F1  &kp F2    &kp F3 &kp F4    &kp F5    &kp F6 &trans &trans      &trans &trans &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
                              &trans    &trans    &trans &trans &trans      &trans &trans &trans   &trans   &trans
@@ -79,16 +77,17 @@
 
         raise_layer {
 //
-// Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles + rgb effect cycle
+// Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + print screen + pause/break + output selection / bluetooth profiles + external power toggle + rgb effect cycle
 //
 //  BTCLR  = Blueetooth clear current profile
 //  BTPRV  = Blueetooth previous profile
 //  BTNXT  = Blueetooth next profile
 //  OUTTOG = Toggle output selection (Bluetooth / USB)
+//  EPTOG  = Toggle external power
 //  RGBEFF = RGB effect cycle
 //
 //  /-----------------------------------------------\                                                   /-----------------------------------------------\
-//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                                   | OUTTOG|  trs  |  trs  |  trs  | RIGHT |  trs  |
+//  |  trs  | PSCRN |  UP   | PG_UP | PG_DN | PAUSE |                                                   | OUTTOG|  trs  |  trs  |  trs  | RIGHT | EPTOG |
 //  |-------+-------+-------+-------+-------+-------|                                                   |-------+-------+-------+-------+-------+-------|
 //  |  trs  |  LEFT |  DOWN | RIGHT | RIGHT |  trs  |                                                   |  trs  |  LEFT |  HOME |  END  |  INS  |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\                   /---------------+-------+-------+-------+-------+-------+-------|
@@ -98,10 +97,10 @@
 //                          \---------------------------------------/                   \---------------------------------------/
 
             bindings = <
-&trans     &kp PSCRN &kp UP   &kp PG_UP       &kp PG_DN  &kp PAUSE_BREAK                                  &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &trans
-&trans     &kp LEFT  &kp DOWN &kp RIGHT       &kp RIGHT  &trans                                           &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
-&bt BT_CLR &trans    &trans   &kp DOWN        &kp UP     &trans    &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
-                              &rgb_ug RGB_EFF &trans     &trans    &trans     &trans        &trans &trans &trans       &trans   &trans
+&trans     &kp PSCRN &kp UP   &kp PG_UP       &kp PG_DN  &kp PAUSE_BREAK                                &out OUT_TOG &trans   &trans   &trans  &kp RIGHT &ext_power EP_TOG
+&trans     &kp LEFT  &kp DOWN &kp RIGHT       &kp RIGHT  &trans                                         &trans       &kp LEFT &kp HOME &kp END &kp INS   &trans
+&bt BT_CLR &trans    &trans   &kp DOWN        &kp UP     &trans  &bt BT_PRV &bt BT_NXT    &trans &trans &trans       &trans   &kp DEL  &trans  &trans    &trans
+                              &rgb_ug RGB_EFF &trans     &trans  &trans     &trans        &trans &trans &trans       &trans   &trans
             >;
         };
 
