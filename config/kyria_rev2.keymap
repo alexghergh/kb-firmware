@@ -38,16 +38,16 @@
 //  |-------+-------+-------+-------+-------+-------|                                          |-------+-------+-------+-------+-------+-------|
 //  | SHIFT |   A   |   O   |   E   |   U   |   I   |                                          |   D   |   H   |   T   |   N   |   S   | CTRL  |
 //  |-------+-------+-------+-------+-------+-------+---------------\          /---------------+-------+-------+-------+-------+-------+-------|
-//  | SUPER |   ;   |   Q   |   J   |   K   |   X   |  ESC  |  END  |          | SUPER |   \   |   B   |   M   |   W   |   V   |   Z   | SUPER |
+//  | SUPER |   ;   |   Q   |   J   |   K   |   X   | none  | none  |          | none  | none  |   B   |   M   |   W   |   V   |   Z   | SUPER |
 //  \-----------------------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-----------------------/
-//                          | RGB_TG|  ALT  | LAYER1| SPACE | CTRL  |          | SHIFT | ENTER | none  | none  | LAYER2|
+//                          | RGB_TG| none  | LAYER1| SPACE | CTRL  |          | SHIFT | ENTER |  ALT  | LAYER2| none  |
 //                          \---------------------------------------/          \---------------------------------------/
 
             bindings = <
-&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P    &kp Y                                                 &kp F &kp G &kp C     &kp R &kp L &kp TAB
-&kp LSHIFT &kp A    &kp O     &kp E   &kp U    &kp I                                                 &kp D &kp H &kp T     &kp N &kp S &kp LCTRL
-&kp LWIN   &kp SEMI &kp Q     &kp J   &kp K    &kp X     &kp ESC   &kp END      &kp LWIN   &kp BSLH  &kp B &kp M &kp W     &kp V &kp Z &kp LWIN
-                      &rgb_ug RGB_TOG &kp LALT &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &none &none &mo RAISE
+&kp ESC    &kp APOS &kp COMMA &kp DOT &kp P &kp Y                                                 &kp F    &kp G     &kp C &kp R &kp L &kp TAB
+&kp LSHIFT &kp A    &kp O     &kp E   &kp U &kp I                                                 &kp D    &kp H     &kp T &kp N &kp S &kp LCTRL
+&kp LWIN   &kp SEMI &kp Q     &kp J   &kp K &kp X     &none     &none        &none      &none     &kp B    &kp M     &kp W &kp V &kp Z &kp LWIN
+                      &rgb_ug RGB_TOG &none &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER &kp LALT &mo RAISE &none
             >;
 
             sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
@@ -60,7 +60,7 @@
 //  /-----------------------------------------------\                                      /-----------------------------------------------\
 //  |  trs  |   1   |   2   |   3   |   4   |   5   |                                      |   6   |   7   |   8   |   9   |   0   |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                      |-------+-------+-------+-------+-------+-------|
-//  |  trs  |   `   |  trs  |   -   |   =   |  TAB  |                                      | BKSPC |   /   |   \   |   [   |   ]   |  trs  |
+//  |  trs  |   `   | none  |   -   |   =   | none  |                                      | BKSPC |   /   |   \   |   [   |   ]   |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\      /---------------+-------+-------+-------+-------+-------+-------|
 //  |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |  trs  |  trs  |      |  trs  |  trs  |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
 //  \-----------------------+-------+-------+-------+-------+-------|      |-------+-------+-------+-------+-------+-----------------------/
@@ -69,7 +69,7 @@
 
             bindings = <
     &trans  &kp N1    &kp N2 &kp N3    &kp N4    &kp N5                                  &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &trans
-    &trans  &kp GRAVE &trans &kp MINUS &kp EQUAL &kp TAB                                 &kp BSPC &kp FSLH &kp BSLH &kp LBKT &kp RBKT &trans
+    &trans  &kp GRAVE &none  &kp MINUS &kp EQUAL &none                                   &kp BSPC &kp FSLH &kp BSLH &kp LBKT &kp RBKT &trans
     &kp F1  &kp F2    &kp F3 &kp F4    &kp F5    &kp F6 &trans &trans      &trans &trans &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
                              &trans    &trans    &trans &trans &trans      &trans &trans &trans   &trans   &trans
             >;
