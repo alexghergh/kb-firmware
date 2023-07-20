@@ -54,7 +54,7 @@
                       &rgb_ug RGB_TOG &none &mo LOWER &kp SPACE &kp LCTRL    &kp LSHIFT &kp ENTER  &kp LALT &mo RAISE &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
