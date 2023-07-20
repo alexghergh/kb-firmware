@@ -81,48 +81,48 @@
 
         raise_layer {
 //
-// Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + output selection + bluetooth profiles + external power toggle + rgb effect cycle
+// Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + output selection + bluetooth profiles + rgb effect cycle
 //
-//  BTCLR  = Blueetooth clear current profile
 //  BTPRV  = Blueetooth previous profile
 //  BTNXT  = Blueetooth next profile
-//  OUTTOG = Toggle output selection (Bluetooth / USB)
-//  EPTOG  = Toggle external power
 //  RGBEFF = RGB effect cycle
 //
 //  /-----------------------------------------------\                                                   /-----------------------------------------------\
-//  |  trs  | none  |  UP   | PG_UP | PG_DN | none  |                                                   | OUTTOG| none  | none  | none  | RIGHT | EPTOG |
+//  |  trs  | none  |  UP   | PG_UP | PG_DN | none  |                                                   | none  | none  | none  | none  | RIGHT |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                                   |-------+-------+-------+-------+-------+-------|
 //  |  trs  | LEFT  | DOWN  | RIGHT | RIGHT | none  |                                                   | none  | LEFT  | HOME  |  END  |  INS  |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\                   /---------------+-------+-------+-------+-------+-------+-------|
-//  | BTCLR | none  | none  | DOWN  |   UP  | none  | BTPRV | BTNXT |                   |  trs  |  trs  | none  | none  |  DEL  | none  | none  |  trs  |
+//  |  trs  | none  | none  | DOWN  |   UP  | none  | BTPRV | BTNXT |                   |  trs  |  trs  | none  | none  |  DEL  | none  | none  |  trs  |
 //  \-----------------------+-------+-------+-------+-------+-------|                   |-------+-------+-------+-------+-------+-----------------------/
 //                          | RGBEFF|  trs  |  trs  |  trs  |  trs  |                   |  trs  |  trs  |  trs  |  trs  |  trs  |
 //                          \---------------------------------------/                   \---------------------------------------/
 
             bindings = <
-&trans     &none    &kp UP   &kp PG_UP       &kp PG_DN &none                                          &out OUT_TOG &none    &none    &none   &kp RIGHT &ext_power EP_TOG
-&trans     &kp LEFT &kp DOWN &kp RIGHT       &kp RIGHT &none                                          &none        &kp LEFT &kp HOME &kp END &kp INS   &trans
-&bt BT_CLR &none    &none    &kp DOWN        &kp UP    &none   &bt BT_PRV &bt BT_NXT    &trans &trans &none        &none    &kp DEL  &none   &none     &trans
-                             &rgb_ug RGB_EFF &trans    &trans  &trans     &trans        &trans &trans &trans       &trans   &trans
+    &trans &none    &kp UP   &kp PG_UP       &kp PG_DN &none                                          &none  &none    &none    &none   &kp RIGHT &trans
+    &trans &kp LEFT &kp DOWN &kp RIGHT       &kp RIGHT &none                                          &none  &kp LEFT &kp HOME &kp END &kp INS   &trans
+    &trans &none    &none    &kp DOWN        &kp UP    &none   &bt BT_PRV &bt BT_NXT    &trans &trans &none  &none    &kp DEL  &none   &none     &trans
+                             &rgb_ug RGB_EFF &trans    &trans  &trans     &trans        &trans &trans &trans &trans   &trans
             >;
         };
 
         adjust_layer {
 //
-// Adjust layer (layer 3): ¯\_(ツ)_/¯ (miscellaneous OS/media stuff)
+// Adjust layer (layer 3): ¯\_(ツ)_/¯ (miscellaneous OS/media stuff) + output toggle + power toggle + bluetooth clear
 //
-//  REW   = Rewind
-//  MPREV = Media previous
-//  MNEXT = Media next
-//  FF    = Fast-forward
-//  SCRL  = Scroll lock
-//  BRIUP = Brightness up
-//  BRIDN = Brightness down
-//  SCRSV = Screensaver / Lock
+//  REW    = Rewind
+//  MPREV  = Media previous
+//  MNEXT  = Media next
+//  FF     = Fast-forward
+//  SCRL   = Scroll lock
+//  BRIUP  = Brightness up
+//  BRIDN  = Brightness down
+//  SCRSV  = Screensaver / Lock
+//  OUTTOG = Toggle output selection (Bluetooth / USB)
+//  EPTOG  = Toggle external power
+//  BTCLR  = Blueetooth clear current profile
 //
 //  /-----------------------------------------------\                                         /-----------------------------------------------\
-//  |  trs  |  REW  | MPREV | MNEXT |  FF   | SCRL  |                                         | none  | SCRSV | none  | none  | none  |  trs  |
+//  |  trs  |  REW  | MPREV | MNEXT |  FF   | SCRL  |                                         | none  | SCRSV | OUTTOG| EPTOG | BTCLR |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                         |-------+-------+-------+-------+-------+-------|
 //  |  trs  | none  | none  | none  | none  | CAPS  |                                         | none  | none  | none  | none  | none  |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\         /---------------+-------+-------+-------+-------+-------+-------|
@@ -132,9 +132,9 @@
 //                          \---------------------------------------/         \---------------------------------------/
 
             bindings = <
-&trans &kp C_RW &kp C_PREV   &kp C_NEXT   &kp C_FF &kp SLCK                                 &none  &kp C_AL_LOCK &none       &none       &none           &trans
-&trans &none    &none        &none        &none    &kp CAPS                                 &none  &none         &none       &none       &none           &trans
-&trans &none    &kp C_BRI_DN &kp C_BRI_UP &none    &none    &trans &trans     &trans &trans &none  &kp C_POWER   &kp C_RESET &kp C_SLEEP &kp C_AL_LOGOFF &trans
+&trans &kp C_RW &kp C_PREV   &kp C_NEXT   &kp C_FF &kp SLCK                                 &none  &kp C_AL_LOCK &out OUT_TOG &ext_power EP_TOG &bt BT_CLR      &trans
+&trans &none    &none        &none        &none    &kp CAPS                                 &none  &none         &none        &none             &none           &trans
+&trans &none    &kp C_BRI_DN &kp C_BRI_UP &none    &none    &trans &trans     &trans &trans &none  &kp C_POWER   &kp C_RESET  &kp C_SLEEP       &kp C_AL_LOGOFF &trans
                              &trans       &trans   &trans   &trans &trans     &trans &trans &trans &trans        &trans
             >;
         };
