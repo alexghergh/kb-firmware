@@ -88,7 +88,7 @@
 //  RGBEFF = RGB effect cycle
 //
 //  /-----------------------------------------------\                                                   /-----------------------------------------------\
-//  |  trs  | none  |  UP   | PG_UP | PG_DN | none  |                                                   | none  | none  | none  | none  | RIGHT |  trs  |
+//  |  trs  | none  |  UP   | PG_UP | PG_DN | none  |                                                   | none  | none  |  UP   | DOWN  | RIGHT |  trs  |
 //  |-------+-------+-------+-------+-------+-------|                                                   |-------+-------+-------+-------+-------+-------|
 //  |  trs  | LEFT  | DOWN  | RIGHT | RIGHT | none  |                                                   | none  | LEFT  | HOME  |  END  |  INS  |  trs  |
 //  |-------+-------+-------+-------+-------+-------+---------------\                   /---------------+-------+-------+-------+-------+-------+-------|
@@ -98,9 +98,9 @@
 //                          \---------------------------------------/                   \---------------------------------------/
 
             bindings = <
-    &trans &none    &kp UP   &kp PG_UP       &kp PG_DN &none                                          &none  &none    &none    &none   &kp RIGHT &trans
-    &trans &kp LEFT &kp DOWN &kp RIGHT       &kp RIGHT &none                                          &none  &kp LEFT &kp HOME &kp END &kp INS   &trans
-    &trans &none    &none    &kp DOWN        &kp UP    &none   &bt BT_PRV &bt BT_NXT    &trans &trans &none  &none    &kp DEL  &none   &none     &trans
+    &trans &none    &kp UP   &kp PG_UP       &kp PG_DN &none                                          &none  &none    &kp UP   &kp DOWN &kp RIGHT &trans
+    &trans &kp LEFT &kp DOWN &kp RIGHT       &kp RIGHT &none                                          &none  &kp LEFT &kp HOME &kp END  &kp INS   &trans
+    &trans &none    &none    &kp DOWN        &kp UP    &none   &bt BT_PRV &bt BT_NXT    &trans &trans &none  &none    &kp DEL  &none    &none     &trans
                              &rgb_ug RGB_EFF &trans    &trans  &trans     &trans        &trans &trans &trans &trans   &trans
             >;
         };
