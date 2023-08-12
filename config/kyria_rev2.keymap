@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
         combo_super {
             timeout-ms = <50>;
-            key-positions = <14 15>; // o and e keys
+            key-positions = <2 3>; // , and . keys
             bindings = <&sk LWIN>;
         };
     };
