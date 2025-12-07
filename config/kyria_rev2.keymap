@@ -92,8 +92,8 @@
 //
 // Raise layer (layer 2): arrow keys + home/end + insert/delete + page up/page down + output selection + bluetooth profiles + rgb effect cycle
 //
-//  BTPRV  = Blueetooth previous profile
-//  BTNXT  = Blueetooth next profile
+//  BTPRV  = Bluetooth previous profile
+//  BTNXT  = Bluetooth next profile
 //  RGBEFF = RGB effect cycle
 //
 //  /-----------------------------------------------\                                                   /-----------------------------------------------\
