@@ -13,8 +13,13 @@
 #
 ---
 include:
+  # nice_view_adapter: upstream adapter for the new nice!view display, replacing
+  # the old OLED display; that turns the kyria's 4-pin OLED I2C header into the
+  # SPI bus the display needs (SDA->MOSI, SCL->SCK) and sets the CS pin default
+  # we override in the left keymap file. nice_view: the display shield itself.
+  # Order matters: the adapter must come before nice_view.
   - board: nice_nano_v2
-    shield: kyria_rev2_left
+    shield: kyria_rev2_left nice_view_adapter nice_view
   - board: nice_nano_v2
     shield: kyria_rev2_right
   - board: nice_nano_v2

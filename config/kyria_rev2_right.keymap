@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2024 Alexandru Gherghescu (alexghergh@gmail.com)
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "kyria_rev2_common.dtsi"
+
+// cirque trackpad TM040040 on the OLED I2C header via the keycapsss adapter; DR
+// is a separate wire connected to nice!nano's D0 (P0.08), the only free pin (D1
+// is ws2812 underglow data); active-high DR matches zephyr's own test overlay
+// and all other reference configs, the binding's active-low note covers
+// inverted wiring we don't have
+&pro_micro_i2c {
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        data-ready-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+        data-mode = "relative";
+        primary-tap-enable;
+        sleep-mode-enable;
+    };
+};
+
+&glidepoint_split {
+    device = <&glidepoint>;
+};

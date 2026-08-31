@@ -35,6 +35,25 @@
         };
     };
 
+    // forwarding channel for the cirque trackpad (right half -> left/central);
+    // shared so both halves agree on the channel id; the right keymap file
+    // attaches the device, the left keymap file enables the listener
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        glidepoint_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&glidepoint_split>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
