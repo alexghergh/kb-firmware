@@ -18,9 +18,9 @@ include:
   # SPI bus the display needs (SDA->MOSI, SCL->SCK) and sets the CS pin default
   # we override in the left keymap file. nice_view: the display shield itself.
   # Order matters: the adapter must come before nice_view.
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: kyria_rev2_left nice_view_adapter nice_view
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: kyria_rev2_right
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
