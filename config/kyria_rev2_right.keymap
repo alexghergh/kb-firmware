@@ -6,12 +6,6 @@
 
 #include "kyria_rev2_common.dtsi"
 
-// no OLED on this half (the trackpad replaced it); without this the ssd1306
-// driver fires failed init messages at an absent chip on the bus
-&oled {
-    status = "disabled";
-};
-
 // cirque trackpad TM040040 on the OLED I2C header via the keycapsss adapter; DR
 // is a separate wire connected to nice!nano's D0 (P0.08), the only free pin (D1
 // is ws2812 underglow data); active-high DR matches zephyr's own test overlay
